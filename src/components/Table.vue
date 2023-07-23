@@ -7,11 +7,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="child in userStore.childList" :key="child.uuid">
+      <tr v-for="(child, index) in userStore.childList" :key="child.uuid">
         <td class="text-left">{{ child.name }}
         </td>
         <td class="text-right pr-15">{{ child.birthday }}</td>
-         <v-btn small color="error" @click="userStore.removeChild(child)">Remover</v-btn>
+         <v-btn small color="error" @click="userStore.removeChild(index)">Remover</v-btn>
       </tr>
     </tbody>
   </v-table>

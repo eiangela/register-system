@@ -37,7 +37,7 @@
         </v-col>
 
         <v-col cols="6">
-          <v-btn color="primary" block>Cadastrar</v-btn>
+          <v-btn color="primary" block @click="userStore.nextFinished">Cadastrar</v-btn>
         </v-col>
       </v-row>
     </v-card>
