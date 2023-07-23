@@ -139,6 +139,23 @@
                     alert('Por favor, adicione uma criança.');
                 }
             },
+            
+            newRegister() {
+                // Redefine os campos do formulário para seus valores iniciais ou vazios
+                this.cpf = "";
+                this.filial = "";
+                this.name = "";
+                this.email = "";
+                this.phone = "";
+                this.childName = "";
+                this.childBirthday = "";
+                this.childList = [];
+          
+                // Navega para a página inicial
+                this.router.push({
+                  path: "/",
+                });
+              },
         },
 
         getters: {

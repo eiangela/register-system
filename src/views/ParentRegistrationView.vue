@@ -9,37 +9,37 @@
         variant="outlined"
         density="compact"
         class="mt-5"
-        color="primary"
+        color="success"
       ></v-text-field>
       <v-text-field
         label="Nome"
         v-model="userStore.name"
         variant="outlined"
         density="compact"
-        color="primary"
+        color="success"
       ></v-text-field>
       <v-text-field
         label="E-mail"
         v-model="userStore.email"
         variant="outlined"
         density="compact"
-        color="primary"
+        color="success"
       ></v-text-field>
       <v-text-field
         label="Celular"
         v-model="userStore.phone"
         variant="outlined"
         density="compact"
-        color="primary"
+        color="success"
       ></v-text-field>
       <v-row>
         <v-col cols="6">
-          <v-btn variant="outlined" color="primary" block link to="/">
+          <v-btn variant="outlined" color="success" class="text-none" block link to="/">
             Voltar
           </v-btn>
         </v-col>
         <v-col cols="6">
-          <v-btn color="primary" block @click="userStore.nextPageChild">Próximo</v-btn>
+          <v-btn color="success" class="text-none" block @click="userStore.nextPageChild">Próximo</v-btn>
         </v-col>
       </v-row>
     </v-card>

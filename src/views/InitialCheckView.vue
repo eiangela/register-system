@@ -12,7 +12,7 @@
         variant="outlined"
         density="compact"
         class="mt-5"
-        color="primary"
+        color="success"
         @input="userStore.validateCpf"
         :rules="[userStore.cpfRule]"
       ></v-text-field>
@@ -25,14 +25,15 @@
         variant="outlined"
         class="border-1"
         density="compact"
-        color="primary"
+        color="success"
       ></v-select>
 
       <v-btn
-        color="primary"
+        color="success"
         block
         @click="userStore.nextPageParent"
         :disabled="!userStore.isFormValid"
+        class="text-none"
         >Próximo</v-btn
       >
     </v-card>

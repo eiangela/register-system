@@ -11,7 +11,7 @@
             variant="outlined"
             density="compact"
             class="mt-5"
-            color="primary"
+            color="success"
           ></v-text-field>
         </v-col>
         <v-col cols="5">
@@ -21,11 +21,11 @@
             variant="outlined"
             density="compact"
             class="mt-5"
-            color="primary"
+            color="success"
           ></v-text-field>
         </v-col>
         <v-col cols="2">
-          <v-btn color="primary" height="43px" block class="mt-5" @click="userStore.addChild">Adicionar</v-btn>
+          <v-btn color="success" height="43px" block class="mt-5 text-none" @click="userStore.addChild">Adicionar</v-btn>
         </v-col>
       </v-row>
       <v-divider class="border-opacity-50"></v-divider>
@@ -33,11 +33,11 @@
 
       <v-row class="mt-5">
         <v-col cols="6">
-          <v-btn variant="outlined" color="primary" block link to="/parent">Voltar</v-btn>
+          <v-btn variant="outlined" color="success" class="text-none" block link to="/parent">Voltar</v-btn>
         </v-col>
 
         <v-col cols="6">
-          <v-btn color="primary" block @click="userStore.nextFinished">Cadastrar</v-btn>
+          <v-btn color="success" class="text-none" block @click="userStore.nextFinished">Cadastrar</v-btn>
         </v-col>
       </v-row>
     </v-card>

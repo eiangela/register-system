@@ -23,12 +23,20 @@
       <v-btn
         class="text-none"
         color="success"
-        rounded
         variant="flat"
-        width="90"
+        width="150"
+        @click="userStore.newRegister"
       >
-        Done
+        Novo Cadastro
       </v-btn>
     </div>
   </v-sheet>
 </template>
+
+<script setup>
+import { useUserDataStore } from "../stores/usersStore";
+
+const userStore = useUserDataStore();
+
+
+</script>
