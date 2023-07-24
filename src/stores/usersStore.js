@@ -2,6 +2,7 @@
     import { ref, computed } from "vue";
     import { useRouter } from 'vue-router';
 
+
     export const useUserDataStore = defineStore('user', {
 
         state: () => ({
@@ -57,7 +58,8 @@
             },
 
             cpfRule(value) {
-                if (value && value.length !== 11) {
+                const unmasked = value.replace(/\D/g, "");
+                if (unmasked && unmasked.length !== 11) {
                     return "CPF inválido";
                 }
                 return true;
@@ -127,6 +129,7 @@
             },
             
             removeChild(index) {
+                //Removendo a criança 
                 this.childList.splice(index, 1);
             },
 
@@ -155,23 +158,6 @@
                 this.router.push({
                   path: "/",
                 });
-              },
+            },
         },
-
-        getters: {
-            formattedChildBirthday() {
-                // Verifica se a data de nascimento foi preenchida e tem 8 caracteres (DDMMAAAA)
-                if (this.childBirthday && this.childBirthday.length === 8) {
-                    // Formata a data para DD/MM/AAAA
-                    return (
-                        this.childBirthday.substr(0, 2) +
-                        '/' +
-                        this.childBirthday.substr(2, 2) +
-                        '/' +
-                        this.childBirthday.substr(4, 4)
-                    );
-                }
-                return this.childBirthday;
-            }
-        }
     });

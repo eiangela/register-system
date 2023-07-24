@@ -9,8 +9,12 @@ import router from './route/router';
 import { createPinia } from 'pinia'
 const pinia = createPinia()
 
+//mask 
+import { vMaska } from "maska"
+
 createApp(App)
     .use(vuetify)
     .use(router)
     .use(pinia)
+    .directive("maska", vMaska)
     .mount('#app');

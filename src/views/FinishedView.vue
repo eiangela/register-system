@@ -37,6 +37,4 @@
 import { useUserDataStore } from "../stores/usersStore";
 
 const userStore = useUserDataStore();
-
-
 </script>

@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-card elevation="12" rounded="lg" class="pa-10 mt-5 text-center">
-      <Steps />
+      <Steps :stepnumber="0" />
       <p>
         Para que possamos identificar se você já possui um cadastro, preencher
         os campos abaixo:
@@ -13,7 +13,7 @@
         density="compact"
         class="mt-5"
         color="success"
-        @input="userStore.validateCpf"
+        v-maska:[options]
         :rules="[userStore.cpfRule]"
       ></v-text-field>
 
@@ -43,6 +43,18 @@
 <script setup>
 import Steps from "../components/Steps.vue";
 import { useUserDataStore } from "../stores/usersStore";
+import { reactive } from "vue";
 
 const userStore = useUserDataStore();
+
+const options = reactive({
+  mask: "###.###.###-##",
+  eager: true,
+});
 </script>
+
+<style>
+.v-container {
+  width: 70%;
+}
+</style>
